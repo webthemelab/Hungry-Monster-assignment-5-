@@ -1,4 +1,29 @@
 body{
     background-color: rgb(179, 179, 179);
 }
- 
+#meals-container  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:10px ;
+    text-align: center;
+    padding: 10px 20px;
+   
+    
+ }
+ #meals-container img{
+    width: 280px;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+.detail{
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  border-radius: 5px;
+  padding: 25px 0px;
+  background-color: beige;
+}
+.detail h3{
+    margin-top: 20px;
+}
