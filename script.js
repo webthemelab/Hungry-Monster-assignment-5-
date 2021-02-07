@@ -1,13 +1,19 @@
+const searchMeal = ()=>{
+  const searchText =  document.getElementById('search-field').value;
+  document.getElementById('search-field').value;
+  const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
+  fetch(url)
+  .then(res => res.json())
+  .then(data =>displayMeals(data.meals))
 
-fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
-.then(res => res.json())
-.then(data => console.log(data));
+}
 
+const displayMeals = meals =>{
+  const mealsContainer = document.getElementById('meals-container');
 
-const displayMeals = meals => {
-  for (let i = 0; i < meals.length; i++) {
-      const meal = meals[i];
-      console.log(meal.strCategory);
-  }
-
+  meals.forEach(meal => {
+    const li = document.createElement('li');
+    li.innerText = meal.strMeal;
+    mealsContainer.appendChild(li);
+  });
 }
