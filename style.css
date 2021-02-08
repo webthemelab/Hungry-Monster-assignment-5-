@@ -27,3 +27,6 @@ body{
 .detail h3{
     margin-top: 20px;
 }
+input#search-field {
+    padding: 5px;
+    border-radius: 5px;
